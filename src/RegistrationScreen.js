@@ -12,9 +12,7 @@ const validatePassword = (password) => {
 }
 
 
-
 const RegistrationScreen = () => {
-
 
     /*
      * This component will have four states:
@@ -62,6 +60,7 @@ const RegistrationScreen = () => {
                     'http://localhost:3001/users/create',
                     {
                         method: 'POST',
+                        headers: {"Content-Type": "application/json"},
                         body: JSON.stringify(
                             {
                                 firstName: firstNameField.value,
