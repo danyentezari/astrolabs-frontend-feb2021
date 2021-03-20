@@ -57,7 +57,7 @@ const RegistrationScreen = () => {
                 setState("sending");
 
                 fetch(
-                    'http://localhost:3001/users/create',
+                    `${process.env.REACT_APP_BACKEND}/users/create`,
                     {
                         method: 'POST',
                         headers: {"Content-Type": "application/json"},
