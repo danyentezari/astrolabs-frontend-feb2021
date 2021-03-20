@@ -23,6 +23,10 @@ const LayoutRoute = (props) => {
                     {
                     'path': '/contact',
                     'label': 'Contact'
+                    },
+                    {
+                    'path': '/registration',
+                    'label': 'Registration'
                     }
                 ]
                 } 

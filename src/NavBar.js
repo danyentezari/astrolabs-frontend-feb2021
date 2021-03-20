@@ -13,23 +13,18 @@ const NavBar = (props) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link active" 
-                aria-current="page" 
-                to={props.links[0].path}>
-                    {props.links[0].label}
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={props.links[1].path}>
-                    {props.links[1].label}
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={props.links[2].path}>
-                    {props.links[2].label}
-                </Link>
-              </li>
+              {
+                props.links.map(
+                  (link) =>
+                  <li className="nav-item">
+                    <Link className="nav-link" 
+                    aria-current="page" 
+                    to={link.path}>
+                        {link.label}
+                    </Link>
+                  </li>
+                )
+              }
             </ul>
           </div>
         </div>
